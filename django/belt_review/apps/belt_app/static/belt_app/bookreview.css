@@ -1,0 +1,35 @@
+h2 {
+    margin-top: 0px;
+}
+#header {
+    vertical-align: top;
+    text-align: right;
+    margin-left: 190px;
+}
+#recent_books {
+    display: inline-block;
+}
+
+#other_books {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 190px;
+}
+
+.other_books {
+    border: 2px solid black;
+    width: 250px;
+    height: 150px;
+    overflow-y: scroll;
+    padding: 5px;
+    
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}

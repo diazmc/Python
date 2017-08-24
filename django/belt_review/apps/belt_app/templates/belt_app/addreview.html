@@ -1,0 +1,31 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel='stylesheet' href="{% static 'belt_app/addreview.css' %}">
+    </head>
+    <body>
+        <div id='header'>
+            <a href='/books'>Home</a>&nbsp
+            <a href='/logout'>Logout</a>
+        </div>
+        <h1>{{books.title}}</h1>
+        
+        <p>{{books.author.name}}</p>
+        <!-- Book title -->
+        <h2>Reviews:</h2>
+
+        <h3>Add a review:</h3>
+
+        <form action=''>
+            <textarea></textarea><br><br>
+            Rating: <select name='rating'>
+                        <option>*****</option>
+                        <option>****</option>
+                        <option>***</option>
+                        <option>**</option>
+                        <option>*</option>
+                    </select><br><br>
+            <input type='submit' value='Submit Review'>
+        </form>
+    </body>
+</html>

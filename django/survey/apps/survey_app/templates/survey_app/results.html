@@ -1,0 +1,12 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h3>Thanks for submitting this form! You have submitted this form {{request.session.counter}} times now</h3>
+        <h2>Submitted Information</h2>
+            <p>Name:{{request.session.name}}</p>
+            <p>Dojo Location:{{request.session.location}}</p>
+            <p>Favorite Language:{{request.session.language}}</p>
+            <p>Comment:{{request.session.comments}}</p>
+    </body>
+</html>

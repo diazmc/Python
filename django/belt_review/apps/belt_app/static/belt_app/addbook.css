@@ -1,0 +1,24 @@
+#header {
+    display: block;
+    text-align: right;
+}
+
+#wrapper {
+    margin-top: 10px;
+}
+
+input {
+    border: 2px solid black;
+}
+
+textarea {
+    border: 2px solid black;
+}
+
+#add_book {
+    float: right;
+}
+
+#author {
+    margin-left: 40px;
+}

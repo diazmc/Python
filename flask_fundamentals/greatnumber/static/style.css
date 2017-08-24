@@ -1,0 +1,16 @@
+.red{
+    background-color: red;
+    color: white;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+#wrapper{
+    width: 900px;
+    text-align: center;
+}
+
+

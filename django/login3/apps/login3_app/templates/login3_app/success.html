@@ -1,0 +1,42 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel='stylesheet' href="{% static 'login3_app/style.css' %}">
+    </head>
+    <body>
+        <div id='header'>
+            <h1>Welcome, {{user.first_name}}</h1>
+            <form action='/logout'>
+                <input type='submit' value='Logout' id='logout'>
+            </form>
+        </div>
+            
+        <textarea rows='8' cols='40'></textarea>
+
+        <p>People you may want to poke:</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Alias</th>
+                <th>Email Address</th>
+                <th>Poke History</th>
+                <th>Action</th>
+            </tr>
+
+            {% for person in users %}
+            
+            <tr>
+                <td>{{person.first_name}}</td>
+                <td>{{person.last_name}}</td>
+                <td>{{person.email}}</td>
+                <td>  {{pokes}}</td>
+
+                <form action='/{{person.id}}'>
+                    <td><input type='submit' value='{{poke}}'></td>
+                </form>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </body>
+</html>

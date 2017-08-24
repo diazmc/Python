@@ -1,0 +1,12 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>Surprise Me!</h2>
+            <form action='/process' method='post'>
+                Pick a number:  <input type='text' name='number'><br><br>
+                {% csrf_token %}
+                <input type='submit' value='Ready!'>
+            </form>
+    </body>
+</html>

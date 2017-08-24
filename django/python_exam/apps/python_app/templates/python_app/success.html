@@ -1,0 +1,15 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel='stylesheet' href="{% static 'python_app/success.css' %}">
+    </head>
+    <body>
+        <div id='header'>
+            <h1>Welcome {{user.first_name}}</h1>
+            
+            <form action='/logout'>
+                <input type='submit' value='Logout' id='logout'>
+            </form>
+        </div>
+    </body>
+</html>

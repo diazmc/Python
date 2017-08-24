@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h1>Welcome to The Great Number Game</h1>
+                <p>I am thinking of number between 1 and 100</p>
+                <p>Take a guess!!</p>
+
+                {%if 'randnumber' in session%}
+                <div id='msg' class={{color}}>    
+                    <h2>{{ text }}</h2>
+                </div>
+                {%if session['number'] == session['randnumber']%}
+                    <form action='/reset' method='post'>
+                        <input type='submit' value='PLAY AGAIN!'>
+                    </form>
+                {%endif%}
+                {%endif%}
+
+                {%if session['number'] != session['randnumber']%}
+                    <form action='/number' method='POST'>
+                        <input type='text' name='number'><br><br>
+                        <input type='submit' value='SUBMIT' name='submit'>
+                    </form>
+                {% endif %}   
+        </div>    
+        
+    </body>
+</html>

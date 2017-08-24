@@ -1,0 +1,41 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel='stylesheet' href="{% static 'belt_app/addbook.css' %}">
+    </head>
+    <body>
+        <div id='header'>
+            <a href='/books'>Home</a>
+            <a href='/logout'>Logout</a>
+        </div>
+
+        <div id='wrapper'>
+            <h2>Add a New Book Title and a Review</h2>
+
+            <form action='/addbook' method='post'>
+                {% csrf_token %}
+                <b>Book Title:</b><input type='text' name='title'><br><br>
+                <b>Author:</b>
+                <div id='author'>
+                    <p>Choose from the list:</p>
+                        <select name='author'>
+                            {% for author in authors %}
+                            <option>{{author.name}}</option>
+                            {% endfor %}
+                        </select>
+                    <p>Or add a new author:<input type='text' name='other_author'></p>
+                </div>
+                <b>Review:</b><textarea name='review'></textarea><br><br>
+                <b>Rating:</b>
+                    <select name='rating'>
+                        <option>*****</option>
+                        <option>****</option>
+                        <option>***</option>
+                        <option>**</option>
+                        <option>*</option>
+                    </select><br><br>
+                <input type='submit' value='Add Book and Review' id='add_book'>
+            </form>
+        </div>
+    </body>
+</html>

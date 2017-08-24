@@ -1,0 +1,22 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel='stylesheet' href="{% static 'belt_app/userinfo.css' %}">
+    </head>
+    <body>
+        <div id='header'>
+            <a href='/books'>Home</a>&nbsp&nbsp
+            <a href='/books/add'>Add Book and Review</a>&nbsp&nbsp
+            <a href='/logout'>Logout</a>
+        </div>
+
+        <h2>User Alias: {{user.alias}}</h2>
+        <p>Name: {{user.name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Total Reviews: </p> <!-- range(len(reviews))-->
+        
+        <h3>Posted Reviews on the following books:</h3>
+        <!-- Book titles -->
+
+    </body>
+</html>

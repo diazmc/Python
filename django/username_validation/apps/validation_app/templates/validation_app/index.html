@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% if messages %}
+            {% for message in messages %}
+                <h2>{{message}}</h2>
+            {% endfor %}
+        {% endif %}
+
+        <form action='/process' method='post'>
+            {% csrf_token %}
+            Username:<input type='text' name='username'>
+            <input type='submit' value='Submit'>
+        </form>
+    </body>
+</html>

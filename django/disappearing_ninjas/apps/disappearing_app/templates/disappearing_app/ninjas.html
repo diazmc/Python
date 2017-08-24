@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% load staticfiles %}
+        
+        {% if color == 'blue' %}
+            <img src="{% static 'disappearing_app/img/leonardo.jpg' %}">
+        {% elif color == 'orange' %}
+            <img src="{% static 'disappearing_app/img/michelangelo.jpg' %}">
+        {% elif color == 'red' %}
+            <img src="{% static 'disappearing_app/img/raphael.jpg' %}">
+        {% elif color == 'purple' %}
+            <img src="{% static 'disappearing_app/img/donatello.jpg' %}">
+        {% else %}
+            <img src="{% static 'disappearing_app/img/notapril.jpg' %}">
+        {% endif %}
+    </body>
+</html>

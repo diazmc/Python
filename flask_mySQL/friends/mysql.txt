@@ -1,0 +1,11 @@
+OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (61)")
+
+Port number should be the same as MySQL Port
+
+OperationalError: (_mysql_exceptions.OperationalError) (2013, 'Lost connection to MySQL server during query') [SQL: u'SELECT * FROM friends']
+
+Need to start server to connect to the database
+
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'rot'@'localhost' (using password: YES)")
+
+username has to be ‘root’

@@ -1,0 +1,12 @@
+th {
+    padding: 30px;
+}
+td {
+    padding: 30px;
+}
+#add {
+    background-color: green;
+}
+#no {
+    background-color: red;
+}

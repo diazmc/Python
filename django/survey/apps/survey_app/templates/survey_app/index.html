@@ -1,0 +1,15 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form action='/process' method='post'>
+            Your Name:<input type='text' name='name'><br><br>
+            Dojo Location:<select name='location'><option>San Jose</option></select><br><br>
+            Favorite Language:<select name='language'><option>Javascript</option></select><br><br>
+            Comment(optional):<input type='text' name='comments'><br><br>
+            {% csrf_token %}
+            <input type='submit' value='Submit'>
+        </form>
+
+    </body>
+</html>

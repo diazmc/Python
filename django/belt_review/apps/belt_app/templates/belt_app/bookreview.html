@@ -1,0 +1,30 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel='stylesheet' href="{% static 'belt_app/bookreview.css' %}">
+    </head>
+    <body>
+        <h2>Welcome {{request.session.user}}</h2>
+        <div id='header'>
+            <a href='/books/add'>Add Book and Review</a>&nbsp
+            <a href='/logout'>Logout</a>
+        </div>
+        
+        <div id='recent_books'>
+            <h3><b>Recent Book Reviews:</b></h3>
+
+        </div>
+
+        <div id='other_books'>
+            <h3><b>Other Books with Reviews:</b></h3>
+            <!-- Books with its links -->
+            <div class='other_books'>
+            {% for book in books %}
+                <p><a href='books/{{book.id}}'>{{book.title}}</a></p>
+            {% endfor %}
+            </div>
+        </div>
+
+
+    </body>
+</html>

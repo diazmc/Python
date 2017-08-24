@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>User Name</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                {% for user in users %}
+                <td>{{user.name}}</td>
+                <td><a href=''>{{view}}</a></td>
+                {% endfor %}
+            </tr>
+        </table>
+    </body>
+</html>
